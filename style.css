@@ -1,0 +1,256 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Main container */
+.note-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+}
+
+/* Left icons */
+.left-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.left-icons button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.left-icons button:hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Right color dots */
+.right-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.black { background: black; }
+.purple { background: #a855f7; }
+.orange { background: #fb923c; }
+.teal { background: #14b8a6; }
+
+/* Card stack */
+.stack {
+  position: relative;
+  width: 300px;
+  height: 220px;
+}
+
+/* Card design */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Stack depth effect */
+.card:nth-child(1) { z-index: 3; }
+.card:nth-child(2) {
+  z-index: 2;
+  transform: translateY(12px) scale(0.98);
+  opacity: 0.95;
+}
+.card:nth-child(3) {
+  z-index: 1;
+  transform: translateY(24px) scale(0.96);
+  opacity: 0.85;
+}
+
+/* Card content */
+.card img.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #eee;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+.card p {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* Priority badge */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.badge.Emergency { background: #ef4444; }
+.badge.Urgent { background: #f97316; }
+.badge.Rush { background: #eab308; color: #222; }
+.badge.Important { background: #3b82f6; }
+
+/* Buttons inside card */
+.buttons {
+  margin-top: 10px;
+}
+
+button.call {
+  background: black;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.msg {
+  background: #eee;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form modal */
+.form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: white;
+  padding: 14px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  animation: fadeIn 0.3s ease;
+  height: 500px;
+}
+
+/* Form content */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 10px;
+  background: #1a1a1a;
+  color: white;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #000;
+}
+
+/* Close button */
+.closeForm {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #ff4a4a;
+  border: none;
+  color: #ffe1e1;
+  font-weight: 500;
+  border-radius: 100px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -45%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}

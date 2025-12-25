@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="note-container">
+  <!-- Left icons -->
+  <div class="left-icons">
+    <button id="addBtn" class="add">+</button>
+    <button id="addBtn" class="back">o</button>
+    <button id="addBtn" class="next"> >></button>
+  </div>
+
+  <!-- Card stack -->
+  <div class="stack" id="cardStack">
+    <div class="stack" id="cardStack">
+  
+</div>
+
+  </div>
+
+  <!-- Right color dots -->
+  <div class="right-colors">
+    <div class="dot black"></div>
+    <div class="dot purple"></div>
+    <div class="dot orange"></div>
+    <div class="dot teal"></div>
+  </div>
+</div>
+
+<!-- Form Modal -->
+<div class="form-container" id="formContainer">
+  <form id="myForm">
+    <h2>Add New Card</h2>
+
+    <label>Image URL</label>
+    <input required type="text" name="image" placeholder="Enter image URL">
+
+    <label>Name</label>
+    <input required type="text" name="name" placeholder="Enter a name">
+
+    <label>Purpose</label>
+    <input required type="text" name="purpose" placeholder="Enter purpose">
+
+    <label>City</label>
+    <input required type="text" name="city" placeholder="Enter city">
+
+    <label>Priority</label>
+    <div>
+      <input type="radio" name="priority" value="Emergency"> Emergency
+      <input type="radio" name="priority" value="Urgent"> Urgent
+      <input type="radio" name="priority" value="Rush"> Rush
+      <input type="radio" name="priority" value="Important"> Important
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+    <button type="button" class="closeForm" id="closeBtn">Close</button>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
